@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#28362b">
+  <meta name="description" content="こむぎ日和。パン屋をコンセプトにしたホームページの制作サンプル。パンの写真と商品名、税込価格をご覧いただけます。">
+  <title>こむぎ日和 | パンと暮らす</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preload" as="image" href="assets/croissant.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500&family=Noto+Sans+JP:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#bread">パンの一覧へ</a>
+  <header class="header" id="header">
+    <a class="brand" href="#top" aria-label="こむぎ日和 ホーム"><span class="brand-symbol" aria-hidden="true">こ</span><span><span class="brand-name">こむぎ日和</span><span class="brand-sub">パンと暮らす</span></span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="navigation"><span>メニュー</span><span class="menu-lines" aria-hidden="true"></span></button>
+    <nav class="navigation" id="navigation" aria-label="メインナビゲーション"><a href="#bread">パンのこと</a><a href="#story">私たちのこと</a><a href="#shop">お店のこと</a></nav>
+  </header>
+  <main>
+    <section class="hero" id="top" aria-label="こむぎ日和のパン">
+      <div class="hero-images" aria-hidden="true"><img class="hero-photo is-active" src="assets/croissant.jpg" alt="" width="1800" height="1440" fetchpriority="high"><img class="hero-photo" src="assets/hero.jpg" alt="" width="1800" height="1198"><img class="hero-photo" src="assets/baguette.jpg" alt="" width="1800" height="1200"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-copy"><h1>いつもの朝に<br>焼きたてのパンを</h1><p>小麦の香りで始まる一日。</p></div>
+      <span class="hero-caption" aria-hidden="true">Bread for your everyday.</span>
+    </section>
+    <section class="news section-wrap" id="news" aria-labelledby="news-title">
+      <div>
+        <h2 id="news-title"><span lang="en">News</span><span>お知らせ</span></h2>
+        <p class="demo-note">掲載例</p>
+      </div>
+      <ul class="news-list">
+        <li><time datetime="2026-11-19">2026.11.19</time><span>販売スタッフの採用ページを公開しました。</span></li>
+        <li><time datetime="2026-11-16">2026.11.16</time><span>アクセス情報を掲載しました。</span></li>
+      </ul>
+    </section>
+    <section class="bread-section section-wrap" id="bread" aria-labelledby="bread-title">
+      <div class="section-heading"><h2 id="bread-title">こむぎ日和のパン</h2><p>朝のひと口にも、食卓の真ん中にも。<br>今日の気分に合うパンを見つけてください。</p></div>
+      <div class="catalog-toolbar"><div class="filters" role="group" aria-label="パンの種類で絞り込み"><button class="filter is-selected" data-filter="all" aria-pressed="true">すべて</button><button class="filter" data-filter="croissant" aria-pressed="false">クロワッサン</button><button class="filter" data-filter="meal" aria-pressed="false">食事パン</button></div><p class="tax-note">表示価格はすべて税込</p></div>
+      <p class="sr-only" id="filter-status" aria-live="polite">4種類のパンを表示しています</p>
+      <div class="product-grid">
+        <article class="product" data-category="croissant"><div class="product-image"><img src="assets/croissant.jpg" alt="薄い層が重なったクロワッサン" width="1800" height="1440" loading="lazy"></div><div class="product-info"><h3><span>バター</span><span>クロワッサン</span></h3><p class="price">¥320<span>税込 / 1個</span></p><p class="product-copy">さくっと軽い食感と、バターの豊かな香り。</p><details><summary>商品について<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg></summary><div class="product-detail"><p>薄く重ねた生地を香ばしく焼き上げるクロワッサン。コーヒーと一緒に楽しむ朝食に。</p><p>アレルゲンの表示例　小麦・乳・卵</p></div></details></div></article>
+        <article class="product" data-category="meal"><div class="product-image"><img src="assets/baguette.jpg" alt="表面に小麦粉をまとった丸い田舎パン" width="1800" height="1200" loading="lazy"></div><div class="product-info"><h3>田舎パン</h3><p class="price">¥680<span>税込 / 1個</span></p><p class="product-copy">香ばしい皮と、もっちりした中身を楽しむパン。</p><details><summary>商品について<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg></summary><div class="product-detail"><p>料理と合わせやすい素朴な味わい。厚めに切ってトーストすると、皮の香ばしさが引き立ちます。</p><p>アレルゲンの表示例　小麦</p></div></details></div></article>
+        <article class="product" data-category="meal"><div class="product-image"><img src="assets/bread.jpg" alt="木のボードに並んだライ麦ブレッドのスライス" width="1800" height="1200" loading="lazy"></div><div class="product-info"><h3><span>ライ麦</span><span>ブレッド</span></h3><p class="price">¥540<span>税込 / ハーフ</span></p><p class="product-copy">穀物の風味を楽しむ、毎日の食事パン。</p><details><summary>商品について<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg></summary><div class="product-detail"><p>薄くスライスしてチーズやスープと一緒に。サンドイッチにも合わせやすいパンです。</p><p>アレルゲンの表示例　小麦</p></div></details></div></article>
+        <article class="product" data-category="meal"><div class="product-image"><img src="assets/hero.jpg" alt="ひまわりの種や穀物をまとった丸いパン" width="1800" height="1198" loading="lazy"></div><div class="product-info"><h3><span>種の</span><span>カンパーニュ</span></h3><p class="price">¥720<span>税込 / 1個</span></p><p class="product-copy">種の食感と香ばしさを、ひと口ごとに。</p><details><summary>商品について<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg></summary><div class="product-detail"><p>ひまわりの種などをまとわせた食事パン。そのままでも、軽く温めても楽しめます。</p><p>アレルゲンの表示例　小麦・ごま</p></div></details></div></article>
+      </div>
+      <p class="catalog-note">商品名・価格・原材料の説明はサンプルです。写真はイメージです。</p>
+    </section>
+    <section class="story" id="story" aria-labelledby="story-title"><div class="story-image"><img src="assets/bread.jpg" alt="食卓に並べたスライスパン" width="1800" height="1200" loading="lazy"></div><div class="story-text"><h2 id="story-title">特別な日より<br>いつもの毎日に</h2><p>お気に入りのパンがひとつあるだけで、<br>朝ごはんが少し楽しみになる。</p><p>こむぎ日和が思い描くのは、<br>そんな日々に寄り添う小さなパン屋です。</p><p>トーストにしたり、スープに添えたり。<br>それぞれの食卓で楽しんでいただけるパンを。</p><span class="story-signature" aria-hidden="true">こむぎ日和</span></div></section>
+    <section class="shop section-wrap" id="shop" aria-labelledby="shop-title">
+      <div class="shop-intro">
+        <h2 id="shop-title">お店のこと</h2>
+        <p>こむぎ日和は、お持ち帰りのパン専門店をイメージした架空のお店です。</p>
+      </div>
+      <div class="shop-schedule">
+        <table class="shop-week" aria-describedby="shop-hours-note">
+          <caption class="sr-only">曜日ごとの営業案内</caption>
+          <thead>
+            <tr>
+              <th scope="col">営業時間</th>
+              <th scope="col"><abbr title="月曜日">月</abbr></th>
+              <th scope="col"><abbr title="火曜日">火</abbr></th>
+              <th scope="col"><abbr title="水曜日">水</abbr></th>
+              <th scope="col"><abbr title="木曜日">木</abbr></th>
+              <th scope="col"><abbr title="金曜日">金</abbr></th>
+              <th scope="col"><abbr title="土曜日">土</abbr></th>
+              <th scope="col"><abbr title="日曜日">日</abbr></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="shop-hours">9:00〜18:00</td>
+              <td><span aria-hidden="true">〇</span><span class="sr-only">営業</span></td>
+              <td class="shop-closed">休み</td>
+              <td class="shop-closed">休み</td>
+              <td><span aria-hidden="true">〇</span><span class="sr-only">営業</span></td>
+              <td><span aria-hidden="true">〇</span><span class="sr-only">営業</span></td>
+              <td><span aria-hidden="true">〇</span><span class="sr-only">営業</span></td>
+              <td><span aria-hidden="true">〇</span><span class="sr-only">営業</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <p id="shop-hours-note">パンがなくなり次第終了</p>
+      </div>
+    </section>
+    <section class="visit" id="access" aria-labelledby="access-title">
+      <div class="section-wrap visit-layout">
+        <div>
+          <h2 id="access-title">アクセス</h2>
+          <p class="visit-origin">西荻窪駅周辺</p>
+          <p class="demo-note">架空の店舗サイトの地図掲載例です。</p>
+          <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=%E8%A5%BF%E8%8D%BB%E7%AA%AA%E9%A7%85">Google マップで開く <span aria-hidden="true">→</span></a>
+        </div>
+        <iframe class="visit-map"
+          title="西荻窪駅周辺の Google マップ"
+          src="https://maps.google.com/maps?q=%E8%A5%BF%E8%8D%BB%E7%AA%AA%E9%A7%85&amp;z=16&amp;hl=ja&amp;output=embed"
+          loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+          width="640" height="400" allowfullscreen></iframe>
+      </div>
+    </section>
+    <section class="section-wrap recruit-entry" id="recruit" aria-labelledby="recruit-entry-title">
+      <div>
+        <h2 id="recruit-entry-title">採用情報</h2>
+        <p>販売スタッフの仕事内容や勤務時間をご案内します。</p>
+      </div>
+      <a class="recruit-link recruit-page-link" href="recruit.html">採用ページを見る <span aria-hidden="true">→</span></a>
+    </section>
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="section-wrap contact-layout">
+        <div>
+          <h2 id="contact-title">お問い合わせ</h2>
+          <p>パンや採用についてのお問い合わせ欄です。</p>
+          <p class="demo-note" id="contact-note">サンプルフォームです。入力した内容は送信されません。</p>
+        </div>
+        <form class="contact-form" aria-describedby="contact-note">
+          <label>お問い合わせの種別
+            <select id="contact-topic" required>
+              <option value="">選択してください</option>
+              <option>パン・店舗について</option>
+              <option>採用について</option>
+              <option>その他</option>
+            </select>
+          </label>
+          <label>お名前 <span>必須</span><input id="contact-name" autocomplete="name" maxlength="80" required></label>
+          <label>メールアドレス <span>必須</span><input id="contact-email" type="email" autocomplete="email" maxlength="254" required></label>
+          <label>お問い合わせ内容 <span>必須</span><textarea id="contact-message" rows="5" maxlength="1000" required></textarea></label>
+          <button type="submit" class="contact-submit" hidden>入力内容を確認</button>
+          <div class="contact-review" hidden>
+            <h3 tabindex="-1">入力内容の確認</h3>
+            <dl></dl>
+            <button type="button" class="contact-edit">入力欄に戻る</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><a class="footer-brand" href="#top">こむぎ日和</a><a class="back-top" href="#top">ページの先頭へ<svg viewBox="0 0 16 24" aria-hidden="true"><path d="M8 24V2M1 9l7-7 7 7"/></svg></a><div class="footer-bottom"><p>ココナラ掲載用 Web制作サンプル<br>店名・商品・価格・営業情報は架空の内容です。</p><small>Komugi biyori / Website design sample</small></div></footer>
+</body>
+</html>
